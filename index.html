@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinetech - Accueil</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+<body>
+    <div id="popcorn-container"></div>
+
+<header>
+  <div class="navbar bg-base-100 shadow-sm px-6">
+    
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">CinéTech</a>
+    </div>
+
+    <div class="flex-none">
+      <div class="form-control">
+        <div class="input-group">
+          <input type="search" placeholder="Rechercher un film ou une série..." class="input input-bordered w-64" />
+          <button class="btn btn-square">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main class="p-6 space-y-16">
+
+    <section class="hero min-h-[30vh] bg-base-200 rounded-2xl mb-16"
+      style="background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4');">
+  <div class="hero-content text-center">
+    <div class="max-w-xl">
+      <h1 class="text-4xl font-bold mb-4">Bienvenue sur CinéTech 🎬</h1>
+      <p class="mb-6">
+        Découvre les films et séries les plus populaires, les dernières nouveautés,
+        et crée ta propre liste de favoris.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="film.html" class="btn btn-primary btn-lg">
+          🎬 Voir les films
+        </a>
+
+        <a href="serie.html" class="btn btn-secondary btn-lg">
+          📺 Voir les séries
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Dernier Ajout</h2>
+
+    <div class="carousel w-full overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4" id="ajout-container"></div>
+  </section>
+
+  <section class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Séries populaires</h2>
+
+<div id="series-container" class="carousel w-full overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4">
+  </section>
+
+  <section class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Films populaires</h2>
+
+    <div class="carousel w-full overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4" id="films-container"></div>
+  </section>
+
+<input type="checkbox" id="modal-detail" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box max-w-3xl">
+    
+    <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+
+    <div id="detail-content"></div>
+
+    <div class="modal-action">
+      <label for="modal-detail" class="btn">Fermer</label>
+    </div>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+  <aside>
+    <p>Copyright © 2025 - Projet réalisé dans le cadre de ma formation</p>
+  </aside>
+</footer>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/accueil.js"></script>
+
+
+</body>
+</html>
