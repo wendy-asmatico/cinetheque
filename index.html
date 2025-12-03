@@ -20,19 +20,27 @@
       <a class="btn btn-ghost normal-case text-xl">CinéTech</a>
     </div>
 
-    <div class="flex-none">
-      <div class="form-control">
-        <div class="input-group">
-          <input type="search" placeholder="Rechercher un film ou une série..." class="input input-bordered w-64" />
-          <button class="btn btn-square">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
-              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
-            </svg>
-          </button>
-        </div>
-      </div>
+<div class="flex-none">
+  <form id="searchForm" class="form-control">
+    <div class="input-group">
+      <input 
+        type="search" 
+        id="searchInput"
+        placeholder="Rechercher un film ou une série..."
+        class="input input-bordered w-64"
+        required
+      />
+
+      <button type="submit" class="btn btn-square">
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
+        </svg>
+      </button>
     </div>
+  </form>
+</div>
+
 
   </div>
 </header>
@@ -104,8 +112,9 @@
   </aside>
 </footer>
 
-  <script src="assets/js/api.js"></script>
-  <script src="assets/js/accueil.js"></script>
+<script src="config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/accueil.js"></script>
 
 
 </body>

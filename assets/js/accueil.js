@@ -107,14 +107,10 @@ async function openDetail(type, id) {
 }
 
 
-afficherSeriesPopulaires();
-afficherfilmpopulaire();
-dernierajoutMix();
-
 function lancerPluieDePopcorn() {
   const container = document.getElementById("popcorn-container");
 
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 150; i++) {
     const popcorn = document.createElement("div");
     popcorn.classList.add("popcorn");
 
@@ -135,7 +131,15 @@ function lancerPluieDePopcorn() {
   }
 }
 
+
 window.addEventListener("load", () => {
   lancerPluieDePopcorn();
   setInterval(lancerPluieDePopcorn, 3000); // toutes les 3 secondes
 });
+
+afficherSeriesPopulaires();
+afficherfilmpopulaire();
+dernierajoutMix();
+
+
+
