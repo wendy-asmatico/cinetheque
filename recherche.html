@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinéTech - Résultats de recherche</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar bg-base-100 shadow-sm px-6">
+    <div class="flex-1">
+      <a href="index.html" class="btn btn-ghost normal-case text-xl">CinéTech</a>
+    </div>
+    
+    <div class="flex-none">
+        <form action="recherche.html" method="GET" class="form-control">
+          <div class="input-group">
+            <input 
+              type="search" 
+              name="q" 
+              placeholder="Rechercher..." 
+              class="input input-bordered w-48 md:w-64"
+              required
+            />
+            <button type="submit" class="btn btn-square">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+    </div>
+  </div>
+</header>
+
+<main class="min-h-screen p-6 max-w-7xl mx-auto">
+
+  <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 text-center md:text-left">
+     Résultats pour : <span id="search-title" class="text-white">...</span>
+  </h1>
+
+  <div id="movies-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      </div>
+
+  <div class="flex justify-center mt-12">
+      <div class="join">
+        <button id="prev-btn" class="join-item btn btn-outline">«</button>
+        <button class="join-item btn btn-outline no-animation pointer-events-none">
+            Page <span id="current-page-num">1</span>
+        </button>
+        <button id="next-btn" class="join-item btn btn-outline">»</button>
+      </div>
+  </div>
+
+  <input type="checkbox" id="modal-detail" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box max-w-3xl relative">
+      <h3 id="modal-title" class="text-xl font-bold mb-4 pr-8"></h3>
+      <div id="detail-content"></div>
+      <div class="modal-action">
+        <label for="modal-detail" class="btn">Fermer</label>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer footer-center p-4 bg-base-300 text-base-content mt-10">
+  <aside>
+    <p>Copyright © 2025 - Projet CinéTech</p>
+  </aside>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/detail.js"></script> 
+<script src="assets/js/recherche.js"></script> </body>
+</html>
+
+

@@ -4,37 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cinetech - Film</title>
- <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
 <header>
   <div class="navbar bg-base-100 shadow-sm px-6">
     
     <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl">Cinéthèque</a>
+      <a href="index.html" class="btn btn-ghost normal-case text-xl">CinéTech</a>
     </div>
 
-    <div class="flex-none">
-  <form id="searchForm" class="form-control">
-    <div class="input-group">
-      <input 
-        type="search" 
-        id="searchInput"
-        placeholder="Rechercher un film ou une série..."
-        class="input input-bordered w-64"
-        required
-      />
-
-      <button type="submit" class="btn btn-square">
-        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
-          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
-        </svg>
-      </button>
-    </div>
-  </form>
+  <form action="recherche.html" method="GET" class="form-control">
+  <div class="input-group">
+    <input 
+      type="search" 
+      name="q" 
+      placeholder="Rechercher un film..."
+      class="input input-bordered w-64"
+      required
+    />
+    <button type="submit" class="btn btn-square">
+      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.3-4.3"/>
+      </svg>
+    </button>
+  </div>
+</form>
 </div>
+</div>
+</header>
+
+<main>
+
+  <h1 class="text-5xl font-bold text-primary">
+  Films
+</h1>
+
+   <div id="movies-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto p-4">
+    </div>
+
+    <input type="checkbox" id="modal-detail" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box max-w-3xl">
+    
+    <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+
+    <div id="detail-content"></div>
+
+    <div class="modal-action">
+      <label for="modal-detail" class="btn">Fermer</label>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="join"> <button id="prev-btn" class="join-item btn btn-outline">«</button>
+  
+  <button class="join-item btn btn-outline no-animation" style="pointer-events: none;">
+      Page <span id="current-page-num">1</span>
+  </button>
+  
+  <button id="next-btn" class="join-item btn btn-outline">»</button>
+</div>
+
+</main>
+ <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+  <aside>
+    <p>Copyright © 2025 - Projet réalisé dans le cadre de ma formation</p>
+  </aside>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/detail.js"></script>
+<script src="assets/js/catalogue_film.js"></script>
+
+</body>
+</html>
 
 

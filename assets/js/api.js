@@ -4,33 +4,44 @@ const IMG_URL = "https://image.tmdb.org/t/p/w300"; // pour les affiches
 
 
 async function fetchFromTMDB(endpoint) {
-  try {
-    const response = await fetch(`${BASE_URL}${endpoint}?api_key=${API_KEY}&language=fr-FR`);
-    if (!response.ok) {
-      throw new Error("Erreur TMDB : " + response.status);
-    }
-    const data = await response.json();
-    return data.results; 
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
+try {
+const response = await fetch(`${BASE_URL}${endpoint}?api_key=${API_KEY}&language=fr-FR`);
+if (!response.ok) {
+throw new Error("Erreur TMDB : " + response.status);
+}
+const data = await response.json();
+return data.results;
+} catch (error) {
+console.error(error);
+return [];
+}
 }
 
 async function fetchDetailFromTMDB(endpoint) {
-  try {
-    const response = await fetch(`${BASE_URL}${endpoint}?api_key=${API_KEY}&language=fr-FR`);
-    if (!response.ok) {
-      throw new Error("Erreur TMDB : " + response.status);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
+try {
+const response = await fetch(`${BASE_URL}${endpoint}?api_key=${API_KEY}&language=fr-FR`);
+if (!response.ok) {
+throw new Error("Erreur TMDB : " + response.status);
+}
+const data = await response.json();
+return data;
+} catch (error) {
+console.error(error);
+return null;
+}
 }
 
-
-
-
+async function fetchFromTMDB(endpoint, page = 1, extraParams = "") {
+try {
+const url = `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=fr-FR&page=${page}${extraParams}`;
+const response = await fetch(url);
+if (!response.ok) {
+throw new Error("Erreur TMDB : " + response.status);
+}
+const data = await response.json();
+return data.results;
+} catch (error) {
+console.error(error);
+return [];
+}
+}
