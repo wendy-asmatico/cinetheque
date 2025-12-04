@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CinéTech - Résultats de recherche</title>
+  <title>Mes Favoris - CinéTech</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,17 +15,12 @@
     <div class="flex-1">
       <a href="index.html" class="btn btn-ghost normal-case text-xl">CinéTech</a>
     </div>
+
     
     <div class="flex-none">
         <form action="recherche.html" method="GET" class="form-control">
           <div class="input-group">
-            <input 
-              type="search" 
-              name="q" 
-              placeholder="Rechercher..." 
-              class="input input-bordered w-48 md:w-64"
-              required
-            />
+            <input type="search" name="q" placeholder="Rechercher..." class="input input-bordered w-48 md:w-64" required />
             <button type="submit" class="btn btn-square">
               <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
@@ -34,28 +29,23 @@
             </button>
           </div>
         </form>
+        
+        <a href="favoris.html" class="btn btn-ghost btn-circle ml-2 text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </a>
     </div>
   </div>
 </header>
 
 <main class="min-h-screen p-6 max-w-7xl mx-auto">
 
-  <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 text-center md:text-left">
-     Résultats pour : <span id="search-title" class="text-white">...</span>
-  </h1>
-
-  <div id="movies-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-      </div>
-
-  <div class="flex justify-center mt-12">
-      <div class="join">
-        <button id="prev-btn" class="join-item btn btn-outline">«</button>
-        <button class="join-item btn btn-outline no-animation pointer-events-none">
-            Page <span id="current-page-num">1</span>
-        </button>
-        <button id="next-btn" class="join-item btn btn-outline">»</button>
-      </div>
+  <div class="flex items-center gap-4 mb-8">
+      <h1 class="text-4xl font-bold text-primary">Mes Favoris</h1>
+      <span id="fav-count" class="badge badge-secondary badge-lg">0</span>
   </div>
+
+  <div id="favorites-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      </div>
 
   <input type="checkbox" id="modal-detail" class="modal-toggle" />
   <div class="modal">
@@ -63,7 +53,7 @@
       <h3 id="modal-title" class="text-xl font-bold mb-4 pr-8"></h3>
       <div id="detail-content"></div>
       <div class="modal-action">
-        <label for="modal-detail" class="btn">Fermer</label>
+        <label for="modal-detail" class="btn" onclick="location.reload()">Fermer</label>
       </div>
     </div>
   </div>
@@ -78,9 +68,5 @@
 
 <script src="assets/js/config.js"></script>
 <script src="assets/js/api.js"></script>
-<script src="assets/js/favoris.js"></script>
-<script src="assets/js/detail.js"></script> 
-<script src="assets/js/recherche.js"></script> </body>
+<script src="assets/js/favoris.js"></script> <script src="assets/js/detail.js"></script>  <script src="assets/js/page-favoris.js"></script> </body>
 </html>
-
-
