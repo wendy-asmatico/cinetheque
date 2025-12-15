@@ -44,6 +44,7 @@ Ouvrez votre terminal et lancez :
 git clone [https://github.com/](https://github.com/)[VOTRE_PSEUDO]/cinetech.git
 cd cinetech
 
+```
 ## 🔑 Configuration de l'API
 
 Ce projet utilise une API externe pour récupérer les données des films. Pour qu'il fonctionne, vous devez renseigner votre propre clé API.
@@ -51,29 +52,19 @@ Ce projet utilise une API externe pour récupérer les données des films. Pour 
 1.  À la racine du projet, créez un fichier nommé **`config.js`**.
 2.  Ouvrez ce fichier et insérez votre clé comme suit :
 
-```javascript
+
+j
+```bashavascript
 // config.js
 const CONFIG = {
     API_KEY: "VOTRE_CLE_API_ICI"
 };
 
-***
-
-### Petit conseil technique pour toi :
+```
+ Petit conseil technique pour toi :
 Comme tu es en JS Vanilla, n'oublie pas d'ajouter `config.js` dans ton fichier `.gitignore` pour ne pas envoyer ta vraie clé sur GitHub !
 
 Dans ton fichier `.gitignore`, ajoute simplement une ligne :
 ```text
 config.js
 
-📂 Structure du projet
-index.html : Page d'accueil et structure principale.
-
-style.css : Feuilles de styles (Mise en page et design).
-
-script.js : Logique de l'application (Appels API, gestion du DOM).
-
-config.js : Fichier contenant les clés secrètes (non versionné).
-
-👤 Auteur
-[Wendy Asmatico]
