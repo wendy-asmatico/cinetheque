@@ -1,0 +1,79 @@
+# 🎬 Cinetech
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+> **[Voir la démo en ligne du projet]([INSERER_LE_LIEN_DE_VOTRE_SITE_ICI])**
+
+**Cinetech** est une application web développée en **JavaScript Vanilla** (pur). Elle permet de rechercher des films, de consulter les tendances du moment et d'accéder aux fiches détaillées via une API cinéma. Le projet met l'accent sur la manipulation du DOM, les requêtes asynchrones (Fetch API) et un design responsive.
+
+---
+
+## 📑 Sommaire
+
+1. [Prérequis](#-prérequis)
+2. [Installation locale](#-installation-locale)
+3. [Configuration de l'API](#-configuration-de-lapi)
+4. [Lancer le projet](#-lancer-le-projet)
+5. [Mise à jour sur GitHub](#-mise-à-jour-sur-github)
+6. [Structure du projet](#-structure-du-projet)
+
+---
+
+## 📋 Prérequis
+
+Pour tester ce projet localement, vous avez simplement besoin de :
+
+* Un navigateur web moderne (Chrome, Firefox, Edge...).
+* Un éditeur de code (VS Code recommandé).
+* Une clé API valide (fournie par **TMDB** ou l'API utilisée).
+* L'extension **Live Server** (sur VS Code) est recommandée pour éviter les problèmes de sécurité liés aux fichiers locaux (CORS).
+
+---
+
+## 🚀 Installation locale
+
+Suivez ces étapes pour récupérer les fichiers sur votre machine.
+
+### 1. Cloner le dépôt
+
+Ouvrez votre terminal et lancez :
+
+```bash
+git clone [https://github.com/](https://github.com/)[VOTRE_PSEUDO]/cinetech.git
+cd cinetech
+
+## 🔑 Configuration de l'API
+
+Ce projet utilise une API externe pour récupérer les données des films. Pour qu'il fonctionne, vous devez renseigner votre propre clé API.
+
+1.  À la racine du projet, créez un fichier nommé **`config.js`**.
+2.  Ouvrez ce fichier et insérez votre clé comme suit :
+
+```javascript
+// config.js
+const CONFIG = {
+    API_KEY: "VOTRE_CLE_API_ICI"
+};
+
+***
+
+### Petit conseil technique pour toi :
+Comme tu es en JS Vanilla, n'oublie pas d'ajouter `config.js` dans ton fichier `.gitignore` pour ne pas envoyer ta vraie clé sur GitHub !
+
+Dans ton fichier `.gitignore`, ajoute simplement une ligne :
+```text
+config.js
+
+📂 Structure du projet
+index.html : Page d'accueil et structure principale.
+
+style.css : Feuilles de styles (Mise en page et design).
+
+script.js : Logique de l'application (Appels API, gestion du DOM).
+
+config.js : Fichier contenant les clés secrètes (non versionné).
+
+👤 Auteur
+[Wendy Asmatico]
