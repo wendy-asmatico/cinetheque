@@ -68,3 +68,53 @@ Dans ton fichier `.gitignore`, ajoute simplement une ligne :
 ```text
 config.js
 
+```
+▶️ Lancer le projet
+Ce projet étant statique (HTML/CSS/JS), il n'y a pas besoin de commande npm start.
+
+Méthode recommandée (VS Code) :
+
+Ouvrez le dossier du projet dans VS Code.
+
+Faites un clic droit sur le fichier index.html.
+
+Sélectionnez "Open with Live Server".
+
+L'application s'ouvrira automatiquement dans votre navigateur par défaut (ex: http://127.0.0.1:5500).
+
+🐙 Mise à jour sur GitHub
+Le projet est déjà déployé. Si vous apportez des modifications, voici comment mettre à jour le dépôt distant :
+
+1.Ajouter les fichiers modifiés :
+
+```bash
+
+git add .
+
+```
+2. Enregistrer les modifications (Commit) :
+
+```bash
+
+git commit -m "Description de la modification (ex: Ajout du mode sombre)"
+
+```
+
+3. Envoyer vers GitHub (Push) :
+
+```bash
+git push origin main
+
+```
+
+📂 Structure du projet
+index.html : Page d'accueil et structure principale.
+
+style.css : Feuilles de styles (Mise en page et design).
+
+script.js : Logique de l'application (Appels API, gestion du DOM).
+
+config.js : Fichier contenant les clés secrètes (non versionné).
+
+👤 Auteur
+[Wendy Asmatico]
